@@ -66,3 +66,26 @@ function contaOrdini(array){
   }
 }
 contaOrdini(utenti);
+
+function prodottiAcquistati(array){
+  let newArr = []
+  for (i=0; i<array.length;i++){
+    for (j=0; j<array[i].ordini.length;j++){
+      newArr.push(array[i].ordini[j].prodotto)
+    }
+  }
+  return newArr;
+}
+console.log(prodottiAcquistati(utenti))
+
+function spesaTotale(array){
+  let sommaTot = 0
+  for (i=0; i<array.length;i++){
+    for (j=0; j<array[i].ordini.length;j++){
+      sommaTot = sommaTot+array[i].ordini[j].prezzo
+    }
+    console.log(sommaTot)
+  }
+  
+}
+spesaTotale(utenti);
