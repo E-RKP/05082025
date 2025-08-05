@@ -91,7 +91,33 @@ function spesaTotale(array){
 spesaTotale(utenti);
 
 const ut = [
-  { nome: "Marco", ... },
-  { nome: "Giulia", ... },
-  { nome: "Luca", ... }
+  { nome: "Marco",  },
+  { nome: "Giulia",  },
+  { nome: "Luca", }
 ]
+
+const numeri = [1, 2, 3, 4, 5];
+// Risultato atteso: [2, 4, 6, 8, 10]
+
+let numeriperdue = numeri.map(gib => gib*2)
+console.log(numeriperdue)
+
+const numerii = [10, 20, 30];
+// Risultato atteso: ["10", "20", "30"]
+let numeriStringa = numerii.map(x => x.toString());
+console.log(numerii)
+
+const ops = [
+  { nome: "Alice", eta: 25 },
+  { nome: "Bob", eta: 30 },
+  { nome: "Charlie", eta: 35 }
+];
+// Risultato atteso: ["Alice", "Bob", "Charlie"]
+
+let nomi = ops.map(x => x.eta.toString())
+console.log(nomi)
+
+const prezzi = [10, 20, 30];
+// Risultato atteso: ["€10", "€20", "€30"]
+newPrezzi = prezzi.map(x => `£${x}`)
+console.log(newPrezzi)
