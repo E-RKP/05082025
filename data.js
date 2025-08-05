@@ -89,3 +89,9 @@ function spesaTotale(array){
   
 }
 spesaTotale(utenti);
+
+const ut = [
+  { nome: "Marco", ... },
+  { nome: "Giulia", ... },
+  { nome: "Luca", ... }
+]
