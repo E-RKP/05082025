@@ -44,6 +44,25 @@ function etaMedia(array){
 etamediaa = etaTot/array.length
 return Math.floor(etamediaa);
 }
-
 console.log(etaMedia(utenti))
 
+function ordine (array){
+
+  let newArr = []
+  for (i=0; i<array.length;i++){
+    if (array[i].ordini.length > 0){
+      newArr.push(array[i].nome)
+    }
+  }
+  return newArr;
+}
+console.log(ordine(utenti))
+
+function contaOrdini(array){
+  for (i=0; i<array.length;i++){
+    if (array[i].ordini.length > 0){
+      console.log(`L' utente ${array[i].nome} ha fatto ${array[i].ordini.length} ordini`)
+    }
+  }
+}
+contaOrdini(utenti);
