@@ -119,5 +119,56 @@ console.log(nomi)
 
 const prezzi = [10, 20, 30];
 // Risultato atteso: ["€10", "€20", "€30"]
-newPrezzi = prezzi.map(x => `£${x}`)
+let newPrezzi = prezzi.map(x => `£${x}`)
 console.log(newPrezzi)
+
+const prodotti = [
+  { nome: "Libro", prezzo: 20 },
+  { nome: "Penna", prezzo: 5 }
+];
+// Risultato atteso:
+// [
+//   { nome: "Libro", prezzo: 18 },
+//   { nome: "Penna", prezzo: 4.5 }
+// ]
+
+let sconto = prodotti.map(x=> [
+
+  {nome: 'Libro', prezzo: x.prezzo-((x.prezzo/100)*10)},
+  {nome: 'Penna', prezzo: x.prezzo-((x.prezzo/100)*10)}
+]
+)
+console.log(sconto)
+
+const voti = [12, 25, 18, 30];
+// Risultato atteso: ["Bocciato", "Promosso", "Promosso", "Promosso"]
+
+function esame (array){
+  for (i=0; i<voti.length;i++){
+    if (voti[i] >= 18){
+      console.log('promosso')
+    }else{
+      console.log('bocciato')
+    }
+  }
+}
+
+esame(voti);
+
+let okk = voti.map(x=> x>= 18 ? 'promosso' : 'bocciato')
+console.log(okk)
+
+const parole = ["cane", "elefante", "sole"];
+// Output atteso: [4, 8, 4]
+let lung = parole.map(x => x.length)
+console.log(lung)
+
+const nami = ["Marco", "Luca", "Giulia"];
+// Output: ["M", "L", "G"]
+let primo = nami.map(x=> x[0])
+console.log(primo)
+
+const parolee = ["ciao", "mondo", "javascript"];
+// Output: ["Ciao", "Mondo", "Javascript"]
+let maiusc = parolee.map(x=> x[0].toUpperCase())
+console.log(maiusc)
